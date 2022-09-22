@@ -5,9 +5,17 @@
 	
 	Class Automovel extends Manual
 	{
-		$cambio = new Cambio(5);
+		private Cambio $cambio;
 
-		parent 
+		public function __construct($embreagem, $cambio)
+		{
+			parent:: __construct($embreagem);
+			$this->cambio = $cambio;
+		} 
+		public function AumentarMarcha()
+		{
+			echo "O pai ta a mil por hora.";
+		}
 	}
 
 ?>
